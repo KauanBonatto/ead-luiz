@@ -1,0 +1,331 @@
+/* COMMON */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}  
+.app section{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+
+h1, h2, h3, h4, h5, h6, p, button {
+  font-family: 'Rajdhani', 'Segoe UI', 'Roboto', sans-serif;
+  font-style: normal;
+  color: #273A5A;
+  margin: 0;
+}
+.home-title, .for-you-title, .if-you-want-title, .who-am-i-title, .about-me-title{
+  text-transform: uppercase;
+  line-height: 100%;
+  color: #001B49;
+}
+
+.box-yellow{
+  width: 100%;
+  max-width: 300px;
+  height: 42px;
+  background: #FDC351;
+  border-radius: 4px;
+}
+.sign-in-wrapper{
+  padding: 6px 6px;
+  gap: 6px;
+
+  background: rgba(253, 195, 81, 0.5);
+  border-radius: 13px;
+}
+.sign-in{
+  width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 84%;
+  text-align: center;
+  background: #FDC351;
+  color: #001B49;
+  border-radius: 7px;
+  padding: 18px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+.scroll-down-wrapper{
+  align-items: center;
+  gap: 10px;
+
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #273A5A;
+  
+  margin-top: 30px;
+}
+.scroll-down{
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #273A5A;
+  border-radius: 20px;
+}
+
+/* ---------------------------------------------- */
+
+/* UTILS */
+.uppercase{ text-transform: uppercase; }
+.flex{ display: flex; }
+.fx-direction-row{ flex-direction: row; }
+.fx-direction-column{ flex-direction: column; }
+.vertical-center{ align-items: center; }
+.all-center{
+  justify-content: center;
+  align-items: center;
+}
+.m-big{ margin: 60px 0; }
+.m-small{ margin: 10px 0; }
+
+.bg-red{
+  background-color: red;
+}
+.bg-blue{
+  background-color:   blue;
+}
+.bg-green{
+  background-color: green;
+}
+
+.bg-gray{ background-color: #F5F5F5; }
+.bg-yellow{ background-color: #FDC351; }
+.text-yellow{ color: #B87A00; }
+
+/* HOME SCREEN */
+.home-section{
+  justify-content: right !important;
+}
+.home-wrapper{ 
+  width: 95%;
+  padding-top: 60px; 
+}
+.home-text-wrapper{
+  width: 50%;
+  padding: 40px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.home-image-wrapper{
+  width: 60%;
+  background-image: url('../assets/home.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.home-text-wrapper h4{
+  font-weight: 600;
+  font-size: 29px;
+  line-height: 84%;
+  letter-spacing: -0.01em;
+}
+.home-title-wrapper{
+  width: fit-content;
+  flex-direction: column;
+  gap: 6px;
+}
+.home-title{
+  font-weight: 500;
+  font-size: 68px;
+  line-height: 84%;
+}
+.home-title-big{
+  font-size: 92px;
+  line-height: 84%;
+  color: #001B49;
+}
+.home-text{
+  max-width: 282px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 94.5%;
+}
+.home-text h6{
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.145em;
+}
+
+/* FOR YOU SCREEN */
+.for-you-section{
+  padding: 60px 0;
+}
+.for-you-wrapper, .about-me-wrapper{
+  width: 90%;
+  padding: 25px;
+  box-sizing: border-box;
+}
+.for-you-title-wrapper, .about-me-title-wrapper{
+  width: 500px;
+}
+.for-you-title, .about-me-title{
+  font-weight: 700;
+  font-size: 72px;
+}
+.for-you-wrapper, .about-me-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.for-you-cards-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+}
+.for-you-card{ gap: 15px; }
+.for-you-card .icon{
+  width: 60px;
+  height: 60px;
+  background: #FFFFFF;
+  border-radius: 12px;
+}
+.for-you-card p {
+  width: 270px;
+  height: 72px;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 24px;
+  color: #273A5A;
+}
+
+/* IF YOU WANT */
+.if-you-want-section{ padding: 100px 20px !important; }
+.if-you-want-wrapper{
+  width: 90%;
+  gap: 60px;
+}
+.if-you-want-title-wrapper{
+  padding: 40px 0;
+}
+.if-you-want-title{
+  font-weight: 500;
+  font-size: 72px;
+}
+.if-you-want-cards-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+}
+.if-you-want-card{ gap: 15px; }
+.if-you-want-card .icon{
+  width: 60px;
+  height: 60px;
+  background: #FDC351;
+  border-radius: 12px;
+}
+.if-you-want-card p {
+  max-width: 270px;
+  height: 46px;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 24px;
+  color: #273A5A;
+}
+
+/* WHO AM I SCREEN */
+.who-am-i-section{
+  padding: 80px 0 !important;
+}
+.who-am-i-wrapper{
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+}
+.who-am-i-image-wrapper{
+  width: 30%;
+}
+.who-am-i-text-wrapper{
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  width: 655px;
+  gap: 16px;
+}
+.who-am-i-title{
+  font-weight: 700;
+  font-size: 50px;
+}
+.who-am-i-text{
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 25px;
+  color: #273A5A;
+}
+
+/* ABOUT ME SCREEN */
+.about-me-section{
+  align-items: center;
+  flex-direction: column;
+}
+.about-me-cards-wrapper{ 
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.about-me-wrapper{
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+.about-me-card{
+  display: flex;
+  flex-direction: column;
+  width: 455px;
+  gap: 15px;
+}
+.about-me-text{
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 24px;
+  color: #273A5A;
+}
+.about-me-footer{
+  font-weight: 700;
+  font-size: 19.0319px;
+  line-height: 24px;
+  color: #537ABD;
+}
+.about-me-wrapper-footer{
+  width: 80%;
+  height: 90px;
+  border-radius: 30%;
+  background-color: #ffffff;
+  position: relative;
+  bottom: -64px;
+}
+
+/* FOOTER SECTION */
+.footer-section{
+  padding: 50px 0 80px 0 !important;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-section .sign-in-wrapper{
+  background-color: rgba(39, 58, 90, 0.5);;
+}
+.footer-section .sign-in{
+  color: #FFFFFF;
+  background-color: #273A5A;
+}
