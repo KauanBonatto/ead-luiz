@@ -12,7 +12,7 @@ body {
   justify-content: center;
   width: 100%;
   box-sizing: border-box;
-  padding-top: 40px;
+  padding-top: 60px;
 }
 
 h1, h2, h3, h4, h5, h6, p, button {
@@ -26,15 +26,20 @@ h1, h2, h3, h4, h5, h6, p, button {
   line-height: 100%;
   color: #001B49;
 }
+.home-wrapper, .for-you-wrapper, .if-you-want-wrapper, .about-me-wrapper, .who-am-i-wrapper{
+  max-width: 1650px;
+}
 
 .box-yellow{
   width: 100%;
-  max-width: 300px;
+  max-width: 210px;
   height: 42px;
   background: #FDC351;
   border-radius: 4px;
 }
 .sign-in-wrapper{
+  width: 55%;
+  min-width: 200px;
   padding: 6px 6px;
   gap: 6px;
 
@@ -43,6 +48,7 @@ h1, h2, h3, h4, h5, h6, p, button {
 }
 .sign-in{
   width: 100%;
+  min-width: 200px;
   font-weight: 700;
   font-size: 18px;
   line-height: 84%;
@@ -108,25 +114,32 @@ h1, h2, h3, h4, h5, h6, p, button {
 
 /* HOME SCREEN */
 .home-section{
-  justify-content: right !important;
+  padding-top: 40px !important;
 }
-.home-wrapper{ 
+.home-wrapper{
+  position: relative;
   width: 95%;
-  padding-top: 60px; 
+  max-width: 1460px;
+  padding-top: 40px; 
 }
 .home-text-wrapper{
-  width: 50%;
+  width: 60%;
   padding: 40px 25px;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 .home-image-wrapper{
-  width: 60%;
+  width: 70%;
+  max-width: 870px;
   background-image: url('../assets/home.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: -80px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 544px;
 }
 .home-text-wrapper h4{
   font-weight: 600;
@@ -172,6 +185,7 @@ h1, h2, h3, h4, h5, h6, p, button {
 }
 .for-you-title-wrapper, .about-me-title-wrapper{
   width: 500px;
+  max-width: 100%;
 }
 .for-you-title, .about-me-title{
   font-weight: 700;
@@ -187,7 +201,13 @@ h1, h2, h3, h4, h5, h6, p, button {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
-  gap: 30px;
+}
+.for-you-cards-wrapper .box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 50%;
+  gap: 20px;
 }
 .for-you-card{ gap: 15px; }
 .for-you-card .icon{
@@ -197,6 +217,7 @@ h1, h2, h3, h4, h5, h6, p, button {
   border-radius: 12px;
 }
 .for-you-card p {
+  max-width: 300px;
   width: 270px;
   height: 72px;
   font-weight: 600;
@@ -250,6 +271,8 @@ h1, h2, h3, h4, h5, h6, p, button {
   align-items: center;
 }
 .who-am-i-image-wrapper{
+  display: flex;
+  justify-content: center;
   width: 30%;
 }
 .who-am-i-text-wrapper{
@@ -264,6 +287,7 @@ h1, h2, h3, h4, h5, h6, p, button {
   font-size: 50px;
 }
 .who-am-i-text{
+  max-width: 576px;
   font-weight: 600;
   font-size: 19px;
   line-height: 25px;
@@ -277,6 +301,7 @@ h1, h2, h3, h4, h5, h6, p, button {
 }
 .about-me-cards-wrapper{ 
   width: 50%;
+  max-width: 500px;
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
@@ -284,7 +309,8 @@ h1, h2, h3, h4, h5, h6, p, button {
 .about-me-wrapper{
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 90%;
+  justify-content: center;
 }
 .about-me-card{
   display: flex;

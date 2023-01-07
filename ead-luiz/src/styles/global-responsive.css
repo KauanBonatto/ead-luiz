@@ -1,9 +1,61 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .no-display-xs{ display: none; }
-    .fx-direction-row{
-        flex-direction: column;
+    .for-you-card .icon, .for-you-card p{
+        margin: auto;
+        text-align: center;
     }
+    .for-you-wrapper{ padding: 8px; }
+    .for-you-title, .if-you-want-title, .about-me-title{ font-size: 52px; text-align: center; }
+    .for-you-cards-wrapper, .if-you-want-cards-wrapper{
+        padding-top: 30px;
+        gap: 50px !important; 
+    }
+    .for-you-cards-wrapper .box{ gap: 50px; }
+    .for-you-card p, .if-you-want-card p{ width: auto; }
+    
+    .who-am-i-text{ 
+        width: 80%; 
+        margin: auto;
+        padding-top: 10px; 
+    }
+
+    .about-me-wrapper{ flex-wrap: wrap; }
+    .about-me-cards-wrapper{ width: 100%; }
+    .about-me-text{ text-align: center; }
+    .about-me-wrapper-footer{ width: 90%; }
+    
+    .box-yellow{ height: 26px; }
+    .scroll-down-wrapper{ justify-content: center; font-size: 15px; }
+    .scroll-down{ 
+        width: 30px; 
+        height: 30px;
+        border: 1px solid #273A5A; 
+    }
+    .scroll-down img{ width: 12px; }
+
+    .home-section{ padding: 60px 0 !important; }
+    .home-wrapper{ padding-top: 0px; }
+    .home-title{ font-size: 34px !important; }
+    .home-title-wrapper{ margin: auto; }
+    .home-title-big{ font-size: 45px !important; }
+    .home-text-wrapper h4{ font-size: 14px !important; }
+    .home-text{ font-size: 12px; }
+    .home-text h6{ 
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .home-text-wrapper img{ width: 40%; }
+
+    .m-big{ margin: 40px 0; }
+    
+    .sign-in{ font-size: 16px; }
+    .sign-in-wrapper{
+        width: 90%;
+        margin: auto;
+    }
+    
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -12,16 +64,73 @@
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
     .no-display-md{ display: none; }
+    .who-am-i-wrapper{
+        flex-wrap: wrap;
+        gap: 60px;
+    }
+    .who-am-i-image-wrapper{ width: 100%; }
+    .who-am-i-image{ width: 60% !important; max-width: 245px; }
+    .who-am-i-title, .who-am-i-text{ text-align: center; }
+
+    .for-you-cards-wrapper .box{ width: auto; }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 1008px) {
     .no-display-lg{ display: none; }
+    .fx-direction-row{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-wrapper{
+        width: 100%;
+        justify-content: center;
+    }
+    .home-text-wrapper{ width: auto; }
+
+    .if-you-want-section{ padding: 60px 0px !important; }
+    .if-you-want-card .icon{ margin: auto; }
+    .if-you-want-wrapper{ gap: 20px; }
+    .if-you-want-cards-wrapper{ gap: 40px; }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1260px) {
     .no-display-xl{ display: none; }
+    .home-image-wrapper{ 
+        height: 614px; 
+        background-position: right;
+    }
+    .for-you-cards-wrapper .box{ gap: 0px; }
+
+    .home-image-wrapper{   
+        background-image: 
+            linear-gradient(90deg, rgba(255,255,255,0) 0%,
+            rgba(255,255,255,0.07746848739495793) 93%, 
+            rgba(255,255,255,0.2007177871148459) 94%, 
+            rgba(255,255,255,1) 100%),  
+            url('../assets/home.png'); 
+    }
+}
+
+/* Only Extra large devices (large desktops, 1400px and up) */
+@media only screen and (max-width: 1400px) {
+    .if-you-want-cards-wrapper{ justify-content: center; }
+    .who-am-i-image{ width: 70%; }
+    .who-am-i-text{ font-size: 17px; }
+}
+
+@media only screen and (max-width: 1580px) {
+    .home-section{
+        justify-content: right !important;
+    }
+}
+
+@media only screen and (max-width: 1260px) {
+    .home-title{ font-size: 56px; }
+    .home-title-big{ font-size: 82px; }
+    .home-text-wrapper h4{ font-size: 26px; }
 }

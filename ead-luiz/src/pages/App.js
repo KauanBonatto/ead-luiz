@@ -25,7 +25,7 @@ function App() {
             <div className="flex home-title-wrapper">
             <h4>Agora você pode dar um upgrade no seu Curso</h4>
               <div>
-                <div className="flex fx-direction-row vertical-center" style={{ gap: 12 }}>
+                <div className="flex vertical-center" style={{ gap: 12 }}>
                   <h1 className="home-title"><b>Análise</b></h1>
                   <h1 className="home-title">de</h1>
                   <div className="box-yellow"></div>
@@ -46,7 +46,7 @@ function App() {
               <h6>Vagas para <strong>jan e fev/2023</strong></h6>
             </div>
 
-            <div className="sign-in-wrapper" style={{ width: '55%' }}>
+            <div className="sign-in-wrapper">
               <button className="sign-in uppercase">Garanta sua vaga</button>
             </div>
 
@@ -58,7 +58,7 @@ function App() {
             </div>
 
           </div>
-          <div className="home-image-wrapper"></div>
+          <div className="home-image-wrapper no-display-lg"></div>
         </div>
       </section>
       <section className="for-you-section bg-yellow">
@@ -67,43 +67,47 @@ function App() {
             <h1 className="for-you-title">Essa análise é para você que</h1>
           </div>
           <div className="for-you-cards-wrapper">
-            <div className="for-you-card flex fx-direction-column">
-              <div className="icon flex all-center">
-                <img src={ConfigIcon} />
-              </div>
-              <p>Lançou seu curso, mas acha que ele é monótono e pouco criativo</p>
-            </div>
-            <div className="for-you-card flex fx-direction-column">
-              <div className="icon all-center">
+            <div className="box">
+              <div className="for-you-card flex fx-direction-column">
                 <div className="icon flex all-center">
-                  <img src={PaintBrushHouseIcon} />
+                  <img src={ConfigIcon} />
                 </div>
+                <p>Lançou seu curso, mas acha que ele é monótono e pouco criativo</p>
               </div>
-              <p>Quer repaginar seu curso com mais recursos tecnológicos e criativos</p>
+              <div className="for-you-card flex fx-direction-column">
+                <div className="icon all-center">
+                  <div className="icon flex all-center">
+                    <img src={PaintBrushHouseIcon} />
+                  </div>
+                </div>
+                <p>Quer repaginar seu curso com mais recursos tecnológicos e criativos</p>
+              </div>
             </div>
-            <div className="for-you-card flex fx-direction-column">
-              <div className="icon all-center">
-                <div className="icon flex all-center">
-                  <img src={LockOpenIcon} />
+            <div className="box">
+              <div className="for-you-card flex fx-direction-column">
+                <div className="icon all-center">
+                  <div className="icon flex all-center">
+                    <img src={LockOpenIcon} />
+                  </div>
                 </div>
+                <p>Está seguro quanto ao conteúdo que entrega, mas não em relação à forma como disponibiliza o curso</p>
               </div>
-              <p>Está seguro quanto ao conteúdo que entrega, mas não em relação à forma como disponibiliza o curso</p>
-            </div>
-            <div className="for-you-card flex fx-direction-column">
-              <div className="icon all-center">
-                <div className="icon flex all-center">
-                  <img src={CoinsIcon} />
+              <div className="for-you-card flex fx-direction-column">
+                <div className="icon all-center">
+                  <div className="icon flex all-center">
+                    <img src={CoinsIcon} />
+                  </div>
                 </div>
+                <p>Quer aumentar o valor agregado do curso melhorando a experiência do aluno</p>
               </div>
-              <p>Quer aumentar o valor agregado do curso melhorando a experiência do aluno</p>
             </div>
           </div>
         </div>
       </section>
       <section className="if-you-want-section bg-gray">
-        <div className="if-you-want-wrapper flex">
+        <div className="if-you-want-wrapper flex fx-direction-row">
           <div className="if-you-want-title-wrapper">
-            <h1 className="if-you-want-title">Se <br /><b>você</b><br /> quer...</h1>
+            <h1 className="if-you-want-title">Se <br className="no-display-sm" /><b>você</b><br className="no-display-sm" /> quer...</h1>
           </div>
           <div className="if-you-want-cards-wrapper">
             <div className="if-you-want-card flex fx-direction-column">
@@ -151,7 +155,7 @@ function App() {
               <p>Pensar em novos projetos com um novo mindset</p>
             </div>
 
-            <div className="sign-in-wrapper" style={{ width: '100%' }}>
+            <div className="sign-in-wrapper" style={{ width: '90%' }}>
               <button className="sign-in uppercase">Garanta sua vaga</button>
             </div>
           </div>
@@ -160,7 +164,7 @@ function App() {
       <section className="who-am-i-section">
         <div className="who-am-i-wrapper">
           <div className="who-am-i-image-wrapper">
-            <img src={whoAmI} />
+            <img className="who-am-i-image" src={whoAmI} />
           </div>
           <div className="who-am-i-text-wrapper">
             <h1 className="who-am-i-title">Quem sou eu?</h1>
