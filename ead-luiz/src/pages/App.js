@@ -1,7 +1,6 @@
 import '../styles/global.css';
 import '../styles/global-responsive.css';
 import AvatarGroup from '../assets/avatar-group.png';
-import HomeImage from '../assets/home.png';
 import whoAmI from '../assets/whoAmI.png';
 
 // ICONS
