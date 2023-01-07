@@ -61,6 +61,8 @@ h1, h2, h3, h4, h5, h6, p, button {
   outline: 0;
   cursor: pointer;
 }
+.sign-in-wrapper:hover{ background: rgba(201, 155, 65, 0.5); }
+.sign-in:hover{ background: #d6a645; }
 .scroll-down-wrapper{
   align-items: center;
   gap: 10px;
@@ -81,6 +83,17 @@ h1, h2, h3, h4, h5, h6, p, button {
   align-items: center;
   border: 2px solid #273A5A;
   border-radius: 20px;
+}
+.scroll-down img{
+  position: relative;
+  animation-name: scroll-down-animation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll-down-animation {
+  from {top: -2px;}
+  to {top: 2px;}
 }
 
 /* ---------------------------------------------- */
@@ -349,9 +362,11 @@ h1, h2, h3, h4, h5, h6, p, button {
   justify-content: center;
 }
 .footer-section .sign-in-wrapper{
-  background-color: rgba(39, 58, 90, 0.5);;
+  background-color: rgba(39, 58, 90, 0.5);
 }
 .footer-section .sign-in{
   color: #FFFFFF;
   background-color: #273A5A;
 }
+.footer-section .sign-in-wrapper:hover{ background: rgba(18, 26, 41, 0.5); }
+.footer-section .sign-in:hover{ background: #172236; }
