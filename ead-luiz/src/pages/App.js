@@ -1,3 +1,4 @@
+import React from 'react';
 import '../styles/global.css';
 import '../styles/global-responsive.css';
 import AvatarGroup from '../assets/avatar-group.png';
@@ -14,8 +15,11 @@ import DolarIcon from '../assets/icons/dolar.png';
 import AtomIcon from '../assets/icons/atom.png';
 import GroupIcon from '../assets/icons/group.png';
 import ScaleIcon from '../assets/icons/scale.png';
+import SingInDialog from '../components/SingInDialog';
 
 function App() {
+  const [open, setOpen] = React.useState(false);
+
   return (
     <section className="app">
       <section className="home-section">
@@ -46,7 +50,7 @@ function App() {
             </div>
 
             <div className="sign-in-wrapper">
-              <button className="sign-in uppercase">Garanta sua vaga</button>
+              <button className="sign-in uppercase" onClick={() => setOpen(true)}>Garanta sua vaga</button>
             </div>
 
             <div className="scroll-down-wrapper flex">
@@ -155,7 +159,7 @@ function App() {
             </div>
 
             <div className="sign-in-wrapper" style={{ width: '90%' }}>
-              <button className="sign-in uppercase">Garanta sua vaga</button>
+              <button className="sign-in uppercase" onClick={() => setOpen(true)}>Garanta sua vaga</button>
             </div>
           </div>
         </div>
@@ -235,9 +239,11 @@ function App() {
       </section>
       <section className="footer-section">
         <div className="sign-in-wrapper" style={{ width: '30%' }}>
-          <button className="sign-in uppercase">Inscreva-se</button>
+          <button className="sign-in uppercase" onClick={() => setOpen(true)}>Inscreva-se</button>
         </div>
       </section>
+
+      <SingInDialog open={open} setOpen={setOpen} />
     </section>
   );
 }
