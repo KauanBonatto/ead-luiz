@@ -1,0 +1,14 @@
+.modal-button{
+    width: 100%;
+    font-family: 'Rajdhani';
+    font-weight: 700;
+    font-size: 18px;
+    padding: 16.5px 80px;
+    line-height: 23px;
+    border-radius: 14px;
+    color: #fff;
+    background-color: #001B49;
+    cursor: pointer;
+}
+
+.modal-button:hover{ background-color: #000e27 }

@@ -1,13 +1,17 @@
 import * as React from 'react';
+import './SingInDialog.css';
 import { 
     Dialog, 
     DialogTitle, 
     DialogContent, 
     TextField,
-    Button,
-    Grid
+    Grid,
+    Alert,
+    IconButton
 } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 import { styled } from '@mui/material/styles';
+import emailjs from 'emailjs-com';
 
 const SingInDialogBox = styled(Dialog)(({ theme }) => ({
     '& .MuiPaper-root': {
@@ -26,21 +30,6 @@ const SingInTitle = styled(DialogTitle)(({ theme }) => ({
     lineHeight: '84%',
     textAlign: 'center',
     color: '#001B49',
-}));
-
-const SingInButton = styled(Button)(({ theme }) => ({
-    width: '100%',
-    fontFamily: 'Rajdhani',
-    fontWeight: '700',
-    fontSize: '18px',
-    padding: '16.5px 80px;',
-    lineHeight: '23px',
-    borderRadius: '14px',
-    color: theme.palette.getContrastText('#001B49'),
-    backgroundColor: '#001B49',
-    '&:hover': {
-      backgroundColor: '#001436',
-    },
 }));
 
 const TextFieldStyled = styled(TextField)({
@@ -79,11 +68,23 @@ const TextFieldStyled = styled(TextField)({
 
 const SingInDialog = (props) => {
     const { setOpen, open } = props;
-    const [valueFormatted, setValueFormatted] = React.useState('');
+    const [formSent, setFormSent] = React.useState(false);
+    const [fullName, setFullName] = React.useState('');
+    const [email, setEmail] = React.useState('');
+    const [whatsapp, setWhatsapp] = React.useState('');
+    const [status, setStatus] = React.useState('');
+
+    const handleModalClose = () => {
+      setOpen(false);
+      setFormSent(false);
+      setFullName('');
+      setEmail('')
+      setWhatsapp('');
+    };
 
     const handlePhone = (event) => {
       let phone = event.target.value;
-      setValueFormatted(phoneMask(phone));
+      setWhatsapp(phoneMask(phone));
     }
     
     const phoneMask = (value) => {
@@ -94,36 +95,104 @@ const SingInDialog = (props) => {
       return value
     }
 
+    const handleSendForm = (e) => {
+      e.preventDefault();
+      console.log(e, 'teste');
+    
+      emailjs.sendForm(
+        'service_t9g9szs',
+        'template_ttcvybd',
+        // process.env.REACT_APP_SERVICE_ID, 
+        // process.env.REACT_APP_TEMPLATE_ID, 
+        e.target,
+        'xxh9-DIqGE2tDzYcW'
+        // process.env.REACT_APP_USER_ID
+      )
+      .then((result) => {
+        if(result.status === 200){
+          setStatus('success');
+          setFormSent(true);
+          setFullName('');
+          setEmail('')
+          setWhatsapp('');
+        }
+        }, (error) => {
+          setStatus('error');
+        });
+    };
+
     return(
-      <SingInDialogBox onClose={() => setOpen(false)} open={open}>
-        <SingInTitle textAlign='center'>GARANTA SUA VAGA</SingInTitle>
-        <DialogContent>
-          <Grid container paddingTop={2} spacing={2}>
-            <Grid item sm={24} xs={24}>
-              <TextFieldStyled required fullWidth label='Nome Completo' sx={{ color: '#273A5A', backgroundColor: '#F3F3F3' }} InputLabelProps={{ shrink: true }} />
+      
+        <SingInDialogBox onClose={handleModalClose} open={open}>
+          <SingInTitle textAlign='center'>GARANTA SUA VAGA</SingInTitle>
+          <DialogContent>
+            <form onSubmit={handleSendForm}>
+            <Grid container paddingTop={2} spacing={2}>
+              <Grid item sm={24} xs={24}>
+                <TextFieldStyled 
+                  required 
+                  fullWidth 
+                  label='Nome Completo' 
+                  name='full_name' 
+                  sx={{ color: '#273A5A', backgroundColor: '#F3F3F3' }} 
+                  InputLabelProps={{ shrink: true }}
+                  value={fullName}
+                  onChange={e => setFullName(e.target.value)} 
+                />
+              </Grid>
+              <Grid item sm={24} xs={24}>
+                <TextFieldStyled 
+                  required 
+                  fullWidth 
+                  label='Email' 
+                  name='email' 
+                  sx={{ color: '#273A5A', backgroundColor: '#F3F3F3' }} 
+                  InputLabelProps={{ shrink: true }} 
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
+                />
+              </Grid>
+              <Grid item md={6} sm={6} xs={24}>
+                <TextFieldStyled
+                  required
+                  fullWidth 
+                  label='Whatsapp'
+                  name='whatsapp'
+                  InputLabelProps={{ shrink: true }}
+                  inputProps={{ maxLength: 15 }}
+                  type='text' inputMode='decimal'
+                  sx={{ color: '#273A5A', backgroundColor: '#F3F3F3' }}
+                  value={whatsapp}
+                  onChange={handlePhone}
+                />
+              </Grid>
+              <Grid item md={6} sm={6} xs={24}>
+                <button className='modal-button' type='submit'>Enviar</button>
+              </Grid>
+              
             </Grid>
-            <Grid item sm={24} xs={24}>
-              <TextFieldStyled required fullWidth label='Email' sx={{ color: '#273A5A', backgroundColor: '#F3F3F3' }} InputLabelProps={{ shrink: true }} />
-            </Grid>
-            <Grid item md={6} sm={6} xs={24}>
-              <TextFieldStyled
-                required
-                fullWidth 
-                label='Whatsapp'
-                InputLabelProps={{ shrink: true }}
-                inputProps={{ maxLength: 15 }}
-                type='text' inputMode='decimal'
-                sx={{ color: '#273A5A', backgroundColor: '#F3F3F3' }}
-                value={valueFormatted}
-                onChange={handlePhone}
-              />
-            </Grid>
-            <Grid item md={6} sm={6} xs={24}>
-              <SingInButton variant="contained">Enviar</SingInButton>
-            </Grid>
-          </Grid>
-        </DialogContent>
-      </SingInDialogBox>
+            </form>
+          </DialogContent>
+            <Alert 
+              severity={status}
+              action={
+                <IconButton
+                  aria-label="close"
+                  color="inherit"
+                  size="small"
+                  onClick={() => {
+                    setFormSent(false);
+                  }}
+                >
+                  <CloseIcon fontSize="inherit" />
+                </IconButton>
+              }
+              style={{display: formSent ? 'flex' : 'none', padding: '0 20px'}} 
+              onClose={() => {setFormSent(formSent)}}>
+              {status == 'success' ? 'Seus dados foram enviados com sucesso!' : 'Algo de errado ocorreu com sua tentativa de cadastro!'}
+            </Alert>
+        </SingInDialogBox>
+      
     );
 };
 
