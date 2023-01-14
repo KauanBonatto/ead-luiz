@@ -10,5 +10,28 @@
     background-color: #001B49;
     cursor: pointer;
 }
-
 .modal-button:hover{ background-color: #000e27 }
+
+
+@media screen and (max-width: 600px) {
+    .dialog-title{ font-size: 40px !important; }
+    .dialog-input{ padding-left: 0 !important; }
+    .modal-button{ padding: 10px; }
+    div.css-15jz6cc-MuiFormControl-root-MuiTextField-root 
+    .MuiOutlinedInput-root fieldset{ padding: 0 10px !important; }
+    div.css-15jz6cc-MuiFormControl-root-MuiTextField-root 
+    .MuiOutlinedInput-root input{
+        padding: 12px 16px !important;
+    }
+    div.css-15jz6cc-MuiFormControl-root-MuiTextField-root label{
+        font-size: .9rem;
+        padding: 0 6px!important;
+    }
+    div.css-ypiqx9-MuiDialogContent-root{ padding: 20px 0px; }
+    .css-143cqw2-MuiModal-root-MuiDialog-root .MuiPaper-root{ 
+        padding: 20px !important; 
+        margin: 10px; 
+        border-radius: 36px; 
+    }
+    div.css-md26zr-MuiInputBase-root-MuiOutlinedInput-root{ font-size: .9rem; }
+}

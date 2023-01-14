@@ -97,7 +97,6 @@ const SingInDialog = (props) => {
 
     const handleSendForm = (e) => {
       e.preventDefault();
-      console.log(e, 'teste');
     
       emailjs.sendForm(
         'service_t9g9szs',
@@ -124,7 +123,7 @@ const SingInDialog = (props) => {
     return(
       
         <SingInDialogBox onClose={handleModalClose} open={open}>
-          <SingInTitle textAlign='center'>GARANTA SUA VAGA</SingInTitle>
+          <SingInTitle textAlign='center' className='dialog-title'>GARANTA SUA VAGA</SingInTitle>
           <DialogContent>
             <form onSubmit={handleSendForm}>
             <Grid container paddingTop={2} spacing={2}>
@@ -134,6 +133,7 @@ const SingInDialog = (props) => {
                   fullWidth 
                   label='Nome Completo' 
                   name='full_name' 
+                  className='dialog-input'
                   sx={{ color: '#273A5A', backgroundColor: '#F3F3F3' }} 
                   InputLabelProps={{ shrink: true }}
                   value={fullName}
