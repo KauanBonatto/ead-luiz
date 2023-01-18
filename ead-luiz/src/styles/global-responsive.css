@@ -72,7 +72,8 @@
     }
     .who-am-i-image-wrapper{ width: 100%; }
     .who-am-i-image{ width: 60% !important; max-width: 245px; }
-    .who-am-i-title, .who-am-i-text{ text-align: justify; }
+    .who-am-i-title{ text-align: center; }
+    .who-am-i-text{ text-align: justify; }
 
     .for-you-cards-wrapper .box{ width: auto; }
 }
