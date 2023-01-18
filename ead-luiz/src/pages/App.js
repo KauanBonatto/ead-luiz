@@ -177,7 +177,7 @@ function App() {
               ao vivo, num estúdio audiovisual. Mas minha paixão pela área da educação 
               foi me guiando para outros horizontes, até que com o passar do tempo e 
               outras experiências, me vi como gerente de projetos educacionais.
-              <br/>
+              <br/><br/>
               Já criei, implementei gerenciei cursos de diversas áreas, 
               como Direito, Linguística, Saúde, beleza, artesanato, psicanálise... 
               Sempre buscando alinhar a estratégia dos meus clientes com as 
@@ -217,8 +217,8 @@ function App() {
                 Nós criamos um vínculo com a EAD PRA VOCÊ, o Luiz é muito parceiro.
               </p>
               <p className="about-me-footer">
-                Solange Belchior – Ibrape <br />
-                Instituto
+                Karina Meyer – Grupo <br />
+                Bandeirantes de Comunicação
               </p>
             </div>
 
@@ -229,8 +229,8 @@ function App() {
                 do nosso trabalho.”
               </p>
               <p className="about-me-footer">
-                Karina Meyer – Grupo <br />
-                Bandeirantes de Comunicação
+                Solange Belchior – Ibrape <br />
+                Instituto
               </p>
             </div>
           </div>
