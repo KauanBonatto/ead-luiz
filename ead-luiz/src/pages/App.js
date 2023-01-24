@@ -217,8 +217,8 @@ function App() {
                 Nós criamos um vínculo com a EAD PRA VOCÊ, o Luiz é muito parceiro.
               </p>
               <p className="about-me-footer">
-                Karina Meyer – Grupo <br />
-                Bandeirantes de Comunicação
+                Solange Belchior – Ibrape <br />
+                Instituto
               </p>
             </div>
 
@@ -229,8 +229,8 @@ function App() {
                 do nosso trabalho.”
               </p>
               <p className="about-me-footer">
-                Solange Belchior – Ibrape <br />
-                Instituto
+                André Antunes – <br />
+                Clin-A
               </p>
             </div>
           </div>
