@@ -15,11 +15,20 @@ import emailjs from 'emailjs-com';
 
 const SingInDialogBox = styled(Dialog)(({ theme }) => ({
     '& .MuiPaper-root': {
+      '@media (max-width: 600px) ': {
+        padding: '16px 18px',
+        margin: '20px',
+        borderRadius: '36px',
+        '& .MuiAlert-root': {
+          margin: '0px',
+          alignItems: 'center'
+        },
+      },
       padding: theme.spacing(3),
       borderRadius: '50px'
     },
     '& .MuiFormControl-root': {
-      borderRadius: '12px'
+      borderRadius: '12px',
     }
   }));
 
@@ -122,7 +131,7 @@ const SingInDialog = (props) => {
 
     return(
       
-        <SingInDialogBox onClose={handleModalClose} open={open}>
+        <SingInDialogBox onClose={handleModalClose} open={open} >
           <SingInTitle textAlign='center' className='dialog-title'>GARANTA SUA VAGA</SingInTitle>
           <DialogContent>
             <form onSubmit={handleSendForm}>
@@ -172,7 +181,6 @@ const SingInDialog = (props) => {
               
             </Grid>
             </form>
-          </DialogContent>
             <Alert 
               severity={status}
               action={
@@ -187,10 +195,11 @@ const SingInDialog = (props) => {
                   <CloseIcon fontSize="inherit" />
                 </IconButton>
               }
-              style={{display: formSent ? 'flex' : 'none', padding: '0 20px'}} 
+              style={{display: formSent ? 'flex' : 'none', padding: '0 20px', marginTop: '12px'}} 
               onClose={() => {setFormSent(formSent)}}>
-              {status == 'success' ? 'Seus dados foram enviados com sucesso!' : 'Algo de errado ocorreu com sua tentativa de cadastro!'}
+              {status == 'success' ? 'Dados enviados com sucesso!' : 'Algo de errado ocorreu com sua tentativa de cadastro!'}
             </Alert>
+          </DialogContent>
         </SingInDialogBox>
       
     );
