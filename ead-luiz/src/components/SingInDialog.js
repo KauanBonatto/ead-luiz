@@ -16,7 +16,7 @@ import emailjs from 'emailjs-com';
 const SingInDialogBox = styled(Dialog)(({ theme }) => ({
     '& .MuiPaper-root': {
       '@media (max-width: 600px) ': {
-        padding: '16px 18px',
+        padding: '16px 0px',
         margin: '20px',
         borderRadius: '36px',
         '& .MuiAlert-root': {
