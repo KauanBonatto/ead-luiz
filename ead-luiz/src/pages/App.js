@@ -50,7 +50,8 @@ function App() {
             </div>
 
             <div className="sign-in-wrapper">
-              <button className="sign-in uppercase" onClick={() => setOpen(true)}>Garanta sua vaga</button>
+              {/* <button className="sign-in uppercase" onClick={() => setOpen(true)}>Tenho interesse</button> */}
+              <button className="sign-in uppercase" onClick={() => window.open('https://pay.kiwify.com.br/ZUSOory')}>Garanta sua vaga</button>
             </div>
 
             <div className="scroll-down-wrapper flex">
@@ -159,7 +160,8 @@ function App() {
             </div>
 
             <div className="sign-in-wrapper" style={{ width: '90%' }}>
-              <button className="sign-in uppercase" onClick={() => setOpen(true)}>Garanta sua vaga</button>
+              {/* <button className="sign-in uppercase" onClick={() => setOpen(true)}>Tenho interesse</button> */}
+              <button className="sign-in uppercase" onClick={() => window.open('https://pay.kiwify.com.br/ZUSOory')}>Garanta sua vaga</button>
             </div>
           </div>
         </div>
@@ -239,7 +241,8 @@ function App() {
       </section>
       <section className="footer-section">
         <div className="sign-in-wrapper" style={{ width: '30%' }}>
-          <button className="sign-in uppercase" onClick={() => setOpen(true)}>Inscreva-se</button>
+          {/* <button className="sign-in uppercase" onClick={() => setOpen(true)}>Inscreva-se</button> */}
+          <button className="sign-in uppercase" onClick={() => window.open('https://pay.kiwify.com.br/ZUSOory')}>Inscreva-se</button>
         </div>
       </section>
 
